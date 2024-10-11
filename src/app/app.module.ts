@@ -10,6 +10,9 @@ import { ListCategoriesComponent } from './list-categories/list-categories.compo
 import { FormsModule } from '@angular/forms';
 import { ContainsPipe } from './contains.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductsCategoryComponent } from './products-category/products-category.component';
+import { ProductsQpCategoryComponent } from './products-qp-category/products-qp-category.component';
 
 @NgModule({
   declarations: [ //liste des composant attacher à ce module 
@@ -20,7 +23,10 @@ import { HighlightDirective } from './highlight.directive';
     HomeComponent,
     ListCategoriesComponent,
     ContainsPipe,
-    HighlightDirective
+    HighlightDirective,
+    NotFoundComponent,
+    ProductsCategoryComponent,
+    ProductsQpCategoryComponent
   ],
   imports: [ //liste des modules à utiliser
     BrowserModule,
