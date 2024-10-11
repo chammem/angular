@@ -1,0 +1,20 @@
+<!-- {{name}}
+<button (click)="f('twin9')">Test</button>
+<input value="name"><br>
+<input [value]="name"><br>
+<input [(ngModel)]="name"><br>-->
+<input [(ngModel)]="titre" type="text" placeholder="Chercher un catégorie" >
+<div class="container">
+    <div  class="row">
+      <div *ngFor="let x of categories | contains:titre" class="col-md-4" style="margin-bottom: 20px;">
+        <!-- <ng-container *ngIf="x.title.toLowerCase().includes(titre.toLowerCase())"> -->
+        <img (click)="getDescription(x.description)" [src]="x.image" [alt]="x.title" class="img-fluid h-50 w-75">
+        <h3 appHighlight >{{x.title | uppercase }}</h3>
+        <button *ngIf="x.available" class="btn btn-primary">Voir produits</button>
+        <button [hidden]="!x.available" class="btn btn-primary">Voir produits</button>
+
+     <!-- <div *ngIf="!x.available"> categorie non disponible </div>-->
+     <div > {{ x.available ?'' : 'categorie non disponible'}} </div>
+    </div>
+    </div>
+  </div>
